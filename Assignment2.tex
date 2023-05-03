@@ -6,6 +6,7 @@
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{float}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
@@ -218,8 +219,18 @@ Let $n(A)$ denote the number of possible outcomes for any event $A$.
 		\begin{align} 
 			\therefore n(S) &= 52
 		\end{align}
+		\begin{table}[H]
+		\centering
+		\def\arraystretch{1.5}
+		\begin{tabular}{|c|l|}
+			\hline
+			\textbf{Event} & \textbf{Description}\\ \hline
+			$E$ & Selected card is an ace of spades.\\ \hline
+			$A$ & Selected card is an ace.\\ \hline
+			$B$ & Selected card is a black card.\\ \hline
+		\end{tabular}
+		\end{table}
 	\item
-		Let Event $E$ := selected card is an ace of spades.\\
 		Clearly, \begin{align}
 			n(E) &= 1
 			\end{align}
@@ -230,10 +241,8 @@ Let $n(A)$ denote the number of possible outcomes for any event $A$.
 		\end{align}			
 	\item
 		\begin{enumerate}[label=\roman*)]
-			\item
-				Let Event $A$ := selected card is an ace.\\
-				
-				There are 4 aces in a deck of 52 cards.\\
+			\item		
+				There are 4 aces in a deck of 52 cards.
 				\begin{align}
 					\therefore n(A) &= 4
 				\end{align}
@@ -244,10 +253,8 @@ Let $n(A)$ denote the number of possible outcomes for any event $A$.
 							  = \frac{1}{13}\\
 					\therefore \pr{A} &= \frac{1}{13}
 				\end{align}
-			\item
-				Let Event $B$ := selected card is a black card.\\
-				
-				There are 26 black card in a deck of 52 cards.\\
+			\item		
+				There are 26 black card in a deck of 52 cards.
 				\begin{align}
 					\therefore n(B) &= 26
 				\end{align}
