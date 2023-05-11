@@ -229,10 +229,18 @@ Let $n(A)$ denote the number of possible outcomes for any event $A$.
 		Clearly, \begin{align}
 			n(E) &= 1
 			\end{align}
+		Let $X$ be a random variable such that, 
 		\begin{align}
-			\therefore \pr{E} &= \frac{n(E)}{n(S)} 
+			X &= 
+			\begin{cases}
+				1, & \text{if the selected card is an ace of spades}\\
+				0, & \text{otherwise}
+			\end{cases}
+		\end{align}
+		\begin{align}
+			\therefore \pr{X=1} &= \frac{n(E)}{n(S)} 
 					  = \frac{1}{52}\\	
-			\therefore \pr{E} &= \frac{1}{52}
+			\therefore \pr{X=1} &= \frac{1}{52}
 		\end{align}			
 	\item
 		\begin{enumerate}[label=\roman*)]
@@ -241,24 +249,40 @@ Let $n(A)$ denote the number of possible outcomes for any event $A$.
 				\begin{align}
 					\therefore n(A) &= 4
 				\end{align}
+				Let $Y$ be a random variable such that,
+				\begin{align}
+					Y &=
+					\begin{cases}
+						1, & \text{if the selected card is an ace}\\
+						0, & \text{otherwise}
+					\end{cases}
+				\end{align}
 
 				\begin{align}
-					\therefore \pr{A} &= \frac{n(A)}{n(S)} 
+					\therefore \pr{Y=1} &= \frac{n(A)}{n(S)} 
 							  = \frac{4}{52}
 							  = \frac{1}{13}\\
-					\therefore \pr{A} &= \frac{1}{13}
+					\therefore \pr{Y=1} &= \frac{1}{13}
 				\end{align}
 			\item		
 				There are 26 black card in a deck of 52 cards.
 				\begin{align}
 					\therefore n(B) &= 26
 				\end{align}
+				Let $Z$ be a random variable such that,
+				\begin{align}
+					Z &= 
+					\begin{cases}
+						1, & \text{if the selected card is a black card}\\
+						0, & \text{otherwise}
+					\end{cases}
+				\end{align}
 
 				\begin{align}
-					\therefore \pr{B} &= \frac{n(B)}{n(S)}
+					\therefore \pr{Z=1} &= \frac{n(B)}{n(S)}
 							   = \frac{26}{52}
 							   = \frac{1}{2}\\
-					\therefore \pr{B} &= \frac{1}{2}
+					\therefore \pr{Z=1} &= \frac{1}{2}
 				\end{align}
 
 		\end{enumerate}	
