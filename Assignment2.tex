@@ -6,6 +6,7 @@
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{hhline}
 \usepackage{float}
 \usepackage{algorithmic}
 \usepackage{graphicx}
@@ -219,21 +220,13 @@ Let $n(A)$ denote the number of possible outcomes for any event $A$.
 		\begin{align} 
 			\therefore n(S) &= 52
 		\end{align}
-        	%\begin{table}[H]
-		%\centering
-                %\input{table.tex}
-                %\label{tab: Table 1}
-                %\end{table}
+        	\begin{table}[H]
+		\centering
+                \input{table.tex}
+                \label{tab: Table 1}
+                \end{table}
 
 	\item
-		Let $X$ be a random variable such that, 
-		\begin{align}
-			X &= 
-			\begin{cases}
-				1, & \text{if the selected card is an ace of spades}\\
-				0, & \text{otherwise}
-			\end{cases}
-		\end{align}
 		There is only one ace of spade card,
 		\begin{align}
 			\therefore \pr{X=1} &= \frac{1}{52}	
@@ -241,14 +234,6 @@ Let $n(A)$ denote the number of possible outcomes for any event $A$.
 	\item
 		\begin{enumerate}[label=\roman*)]
 			\item		
-				Let $Y$ be a random variable such that,
-				\begin{align}
-					Y &=
-					\begin{cases}
-						1, & \text{if the selected card is an ace}\\
-						0, & \text{otherwise}
-					\end{cases}
-				\end{align}
 				There are 4 aces in a deck of 52 cards.
 				\begin{align}
 					\therefore \pr{Y=1} &= \frac{4}{52}
@@ -256,14 +241,6 @@ Let $n(A)$ denote the number of possible outcomes for any event $A$.
 					\therefore \pr{Y=1} &= \frac{1}{13}
 				\end{align}
 			\item		
-				Let $Z$ be a random variable such that,
-				\begin{align}
-					Z &= 
-					\begin{cases}
-						1, & \text{if the selected card is a black card}\\
-						0, & \text{otherwise}
-					\end{cases}
-				\end{align}
 				There are 26 black card in a deck of 52 cards.
 				\begin{align}
 				\therefore \pr{Z=1} &= \frac{26}{52}
