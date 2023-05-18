@@ -1,0 +1,266 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite} 
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{hhline}   
+\usepackage{float}
+\usepackage{algorithmic}   
+\usepackage{graphicx} 
+\usepackage{textcomp}  
+\usepackage{xcolor}
+\usepackage{txfonts}    
+\usepackage{listings} 
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb} 
+%\usepackage{relsize}  
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm} 
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+        %\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%\numberwithin{equation}{section}
+%\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+%\makeatletter
+%\@addtoreset{figure}{problem}
+%\makeatother
+
+%\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+%\renewcommand{\thefigure}{\theproblem}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+
+
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+
+%\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+%     \def\rightbox#1{\makebox[0in][r]{#1}}
+%     \def\centbox#1{\makebox[0in]{#1}}
+%     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+%     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
+\vspace{3cm}
+
+\title{
+	\textbf{Creating a Music Playlist playing random songs}
+}
+\author{
+	Ladva Umanshiva
+
+	AI22BTECH11016
+}
+
+\maketitle
+
+\newpage
+
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\section*{\textbf{Introduction}}
+In this report, the procedure of making music playlist in which random songs are played by the user, scripted in Python, is mentioned. Also the song should not repeat until the entire playlist is played. The program uses libraries such as \textbf{'random' , 'tkinter' , 'os' , 'pydub' , 'pygame' } etc. I have made a GUI for the same.
+
+\section*{\textbf{Procedure}}
+\begin{enumerate}
+	\item
+		Importing the required libraries:
+		\begin{enumerate}
+			\item[\textbullet]
+				In the beginning, import the required libraries such as \textbf{ 'os' , 'pydub' , 'pygame' , 'tkinter' , 'random' }
+		\end{enumerate}
+	\item
+		Creating dashboard for GUI:
+		\begin{enumerate}
+			\item[\textbullet]
+				Using \textbf{tkinter} library, defining the dimensions, background colour, title etc. for the GUI.
+		\end{enumerate}
+	\item
+		Creating a Playlist:
+		\begin{enumerate}
+			\item[\textbullet]
+				A function named \textbf{create \_ playlist} is defined, that takes a file location or file path as parameter.
+			\item[\textbullet]
+				In the function, use \textbf{os} library to fetch the music files from the specified location.
+			\item[\textbullet]
+				Shuffle the list or fetched music files using \textbf{random.shuffle} command.
+			\item[\textbullet]
+				In the last step, return the shuffled music playlist.
+		\end{enumerate}
+	\item
+		Converting \textbf{'.m4a'} files to \textbf{'.wav'}:
+		\begin{enumerate}
+			\item[\textbullet]
+				A function named \textbf{convert \_ to \_ wav} is defined to convert the \textbf{.m4a} files to \textbf{.wav} type files, as pygame do not recognize \textbf{.m4a} files 
+		\end{enumerate}
+	\item
+		Defining functions to play song and stop song:
+		\begin{enumerate}
+			\item[\textbullet]
+				\textbf{play\_song} and \textbf{stop\_song} are defined for playing and stoping song when the play button is pressed.
+				Pressing the \textbf{'play'} button will play the next song stopping the current song playing.
+		\end{enumerate}
+	\item
+		Function to play random songs:
+		\begin{enumerate}
+			\item[\textbullet]
+				A function named \textbf{play\_random\_song} is defined which takes parameters such as file path, playlist, songs played, and label as arguements.
+			\item[\textbullet]
+				While loop ensures that music plays untill and unless the user terminates the program.
+			\item[\textbullet]
+				Select any random song from playlist using method \textbf{random.choice} of random module.
+			\item[\textbullet]
+				Remove the selected song from playlist and add to played song, which ensures that the song do not repeat unless the entire playlist is played.
+			\item[\textbullet]
+				Construct the full path to selected song with methods of \textbf{os} library
+			\item[\textbullet]
+				Check if the selected song is converted to \textbf{.wav} file and play the song.
+		\end{enumerate}
+	\item
+		Play button, label showing current song and tkinter mainloop:
+		\begin{enumerate}
+			\item[\textbullet]
+				Play button is used for playing the song. It also works as next button. Methods of \textbf{tkinter} is used for creating a play button.
+			\item[\textbullet]
+				Label shows the name of current song playing on the GUI dashboard.
+			\item[\textbullet]
+				The command \textbf{canvas.mailoop} is the tkinter loop for the GUI.
+		\end{enumerate}
+
+\end{enumerate}
+\section*{\textbf{Conclusion}}
+In this way, a music playlist can be generated using Python playing random songs with a interactive GUI.
+\end{document}
